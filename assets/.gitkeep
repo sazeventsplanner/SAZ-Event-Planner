@@ -1,0 +1,58 @@
+# SAZ Events - Assets Folder
+# This folder contains all media assets for the website
+
+## Required Files (Replace with your own):
+
+### Videos
+- hero-video.mp4 - Main hero section background video (1920x1080, compressed)
+- video-banner.mp4 - Video banner section background (1920x1080, compressed)
+
+### Audio
+- background-music.mp3 - Background music for the website (loop-friendly)
+
+### Images
+- favicon.png - Website favicon (32x32 or 64x64)
+- logo.png - Company logo (transparent background)
+
+## Recommended Specifications:
+
+### Videos
+- Resolution: 1920x1080 (Full HD)
+- Format: MP4 (H.264 codec)
+- Frame Rate: 30fps
+- Bitrate: 5-10 Mbps for good quality/size balance
+- Duration: 15-30 seconds (looping)
+
+### Audio
+- Format: MP3
+- Bitrate: 128-192 kbps
+- Duration: 2-3 minutes (seamless loop)
+- Sample Rate: 44.1 kHz
+
+### Images
+- Favicon: 64x64 PNG with transparency
+- Logo: 300x100 PNG with transparency
+
+## Free Resources:
+
+### Stock Videos (Free)
+- Pexels: pexels.com
+- Pixabay: pixabay.com
+- Mixkit: mixkit.co
+
+### Stock Music (Free)
+- YouTube Audio Library
+- Bensound: bensound.com
+- Free Music Archive: freemusicarchive.org
+
+### Stock Images (Free)
+- Unsplash: unsplash.com
+- Pexels: pexels.com
+- Pixabay: pixabay.com
+
+## Optimization Tips:
+1. Compress videos using HandBrake or FFmpeg
+2. Use WebP format for images where supported
+3. Implement lazy loading for images
+4. Use CDN for faster delivery
+5. Minimize file sizes without compromising quality
