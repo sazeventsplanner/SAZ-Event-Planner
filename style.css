@@ -455,7 +455,7 @@ img {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background-image: url('bg i/bg2.jpeg?auto=format&fit=crop&w=1600&q=80');
+    background-image: url('assets/logo.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -2572,6 +2572,10 @@ section {
 
 /* --- Mobile Responsiveness --- */
 @media (max-width: 768px) {
+    .hero {
+    background-size: auto 100%;
+    background-position: center center;
+    }
     .header .nav-cta {
         display: none; /* Hide header CTA on small screens */
     }
@@ -2588,4 +2592,7 @@ section {
         width: 100%; /* Full width on phones */
     }
 }
-
+html,
+body {
+    overflow-x: hidden;
+}
