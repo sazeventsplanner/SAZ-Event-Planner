@@ -32,7 +32,7 @@ const galleryItems = document.querySelectorAll('.gallery-item');
 window.addEventListener('load', () => {
     setTimeout(() => {
         preloader.classList.add('hidden');
-    }, 2000);
+    }, 1000);
 });
 
 // ============================================
