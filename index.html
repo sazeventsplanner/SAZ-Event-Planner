@@ -113,8 +113,10 @@
             <li style="--delay: 0.4s"><a href="#gallery" class="nav-link">Gallery</a></li>
             <li style="--delay: 0.5s"><a href="#about" class="nav-link">About</a></li>
             <li style="--delay: 0.6s"><a href="#google-reviews" class="nav-link">Google Reviews</a></li>
-            <li style="--delay: 0.7s"><a href="#Blog" class="nav-link">Blog</a></li>
-            <li style="--delay: 0.8s"><a href="#contact" class="nav-link">Contact</a></li>
+            <li style="--delay: 0.7s"><a href="#booking" class="nav-link">Book Event</a></li> 
+            <li style="--delay: 0.8s"><a href="#vendor-register" class="nav-link">Vendors Reg</a></li>
+            <li style="--delay: 0.9s"><a href="#Blog" class="nav-link">Blog</a></li>
+            <li style="--delay: 0.10s"><a href="#contact" class="nav-link">Contact</a></li> 
         </ul>
         <div class="dashboard-footer">
             <a href="#booking" class="nav-cta mobile-cta">Book Event</a>
@@ -1375,16 +1377,16 @@
      </section>
 
     <!-- Booking Section -->
-    <section class="booking" id="booking">
-        <div class="container">
-            <div class="section-header aos-init aos-animate" data-aos="fade-up">
+<section class="booking" id="booking">
+    <div class="container">
+         <div class="section-header aos-init aos-animate" data-aos="fade-up">
                 <span class="section-subtitle">Reserve Your Date</span>
                 <h2 class="section-title">Book Your <span class="text-gradient">Event</span></h2>
                 <p class="section-description">
                     Ready to create something extraordinary? Fill out the form below 
                     and our team will get back to you within 24 hours.
                 </p>
-            </div>
+        </div>
             
             <div class="booking-container aos-init aos-animate" data-aos="fade-up">
                 <form class="booking-form" id="bookingForm" action="https://formspree.io/f/xojoyevy" method="POST">
@@ -1441,48 +1443,76 @@
                     <div class="form-group">
                         <label for="message">Tell Us About Your Event</label>
                         <textarea id="message" name="message" rows="5" placeholder="Share your vision, theme ideas, special requirements, or any questions you have..."></textarea>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="newsletter" checked="">
-                            <span>Subscribe to our newsletter for event tips and exclusive offers</span>
-                        </label>
-                    </div>
-                    
+                    </div>                                     
                     <button type="submit" class="btn btn-primary btn-submit">
                         <span>Submit Booking Request</span>
                         <i class="fas fa-paper-plane"></i>
                     </button>
                 </form>
-                
-                <div class="booking-info">
-                    <div class="info-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h4>Call Us</h4>
-                            <p>+91 8693862294</p>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Vendor Registration Section -->
+    <section class="vendor-register" id="vendor-register">
+        <div class="container">
+            <div class="section-header aos-init aos-animate" data-aos="fade-up">
+                <span class="section-subtitle">Join Our Network</span>
+                <h2 class="section-title">Vendor <span class="text-gradient">Registration</span></h2>
+                <p class="section-description">
+                    Are you a vendor interested in partnering with us for event planning?
+                    Fill out the form below and our team will reach out to you.
+                </p>
+            </div>
+
+            <div class="vendor-container aos-init aos-animate" data-aos="fade-up">
+                <form class="booking-form" id="vendorForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="vendor-name">Vendor Name *</label>
+                            <input type="text" id="vendor-name" name="vendor-name" placeholder="Enter your business/vendor name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="vendor-type">Vendor Type *</label>
+                            <select id="vendor-type" name="vendor-type" required>
+                                <option value="">Select vendor type</option>
+                                <option value="Food & Catering">Food & Catering</option>
+                                <option value="Water Supply">Water Supply</option>
+                                <option value="Decoration">Decoration</option>
+                                <option value="Photography/Videography">Photography/Videography</option>
+                                <option value="Lighting & Sound">Lighting & Sound</option>
+                                <option value="Furniture & Tent">Furniture & Tent</option>
+                                <option value="Transportation">Transportation</option>
+                                <option value="Entertainment/DJ">Entertainment/DJ</option>
+                                <option value="Other">Other</option>
+                            </select>
                         </div>
                     </div>
-                    <div class="info-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>Email Us</h4>
-                            <p>sazveventplanner01@gmail.com</p>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="vendor-contact">Contact Number *</label>
+                            <input type="tel" id="vendor-contact" name="vendor-contact" placeholder="+91 XXXXX XXXXX" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="vendor-email">Email ID (optional)</label>
+                            <input type="email" id="vendor-email" name="vendor-email" placeholder="your@email.com">
                         </div>
                     </div>
-                    <div class="info-item">
-                        <i class="fas fa-clock"></i>
-                        <div>
-                            <h4>Working Hours</h4>
-                            <p>24*7</p>
-                        </div>
+
+                    <div class="form-group">
+                        <label for="vendor-description">Description (optional)</label>
+                        <textarea id="vendor-description" name="vendor-description" rows="4" placeholder="Tell us about your products/services, experience, or anything else..."></textarea>
                     </div>
-                </div>
+
+                    <button type="submit" class="btn btn-primary btn-submit">
+                        <span>Submit Vendor Details</span>
+                        <i class="fab fa-whatsapp"></i>
+                    </button>
+                </form>
             </div>
         </div>
     </section>
-
         <!-- Blog Section -->
          <section class="blog" id="blog">
         <div class="container">

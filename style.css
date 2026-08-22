@@ -1497,7 +1497,10 @@ section {
     font-size: 1rem;
     margin-bottom: 3px;
 }
-
+.vendor-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
 .author-info span {
     font-size: 0.85rem;
     color: var(--text-muted);
@@ -1535,10 +1538,7 @@ section {
 }
 
 .booking-container {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 60px;
-    max-width: 1100px;
+    max-width: 700px;
     margin: 0 auto;
 }
 

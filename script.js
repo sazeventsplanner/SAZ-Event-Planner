@@ -453,6 +453,39 @@ bookingForm.addEventListener('submit', async (e) => {
     bookingForm.reset();
 });
 
+// Vendor Registration Form -> WhatsApp
+const vendorForm = document.getElementById('vendorForm');
+
+if (vendorForm) {
+    vendorForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        if (!vendorForm.checkValidity()) {
+            vendorForm.reportValidity();
+            return;
+        }
+
+        const name = document.getElementById('vendor-name').value.trim();
+        const type = document.getElementById('vendor-type').value.trim();
+        const contact = document.getElementById('vendor-contact').value.trim();
+        const email = document.getElementById('vendor-email').value.trim();
+        const description = document.getElementById('vendor-description').value.trim();
+
+        let message = `New Vendor Registration\n\n`;
+        message += `Vendor Name: ${name}\n`;
+        message += `Type: ${type}\n`;
+        message += `Contact No: ${contact}\n`;
+        if (email) message += `Email: ${email}\n`;
+        if (description) message += `Description: ${description}\n`;
+
+        const whatsappNumber = '918591271894';
+        const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+        window.open(whatsappUrl, '_blank');
+        vendorForm.reset();
+    });
+}
+
 // Modal controls
 modalClose.addEventListener('click', () => {
     successModal.classList.remove('active');
