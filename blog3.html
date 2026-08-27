@@ -1,63 +1,300 @@
-<div class="blog-card" style="
-    max-width:100%;
-    margin:0 auto;
-    display:flex;
-    align-items:center;
-    gap: 50px;
-    background:#0a0a0a;
-    border:1px solid rgba(212,175,55,0.2);
-    border-radius:20px;
-    padding:30px;
-">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="How to Choose the Right Event Planner - SAZ Event Planning">
+    <meta name="keywords" content="event planner, choosing event planner, professional events, SAZ events">
+    <meta name="author" content="SAZ Events">
 
-    <div class="blog-image" style="flex:0 0 40%;">
-        <img src="assets/blog/blog3.jpeg"
-             alt="Event Planning"
-             style="
-                width:100%;
-                height:350px;
-                object-fit:cover;
-                border-radius:15px;">
-    </div>
+    <title>How to Choose the Right Event Planner | SAZ Event Planning</title>
 
-    <div class="blog-content" style="flex:0 0 55%;">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-        <h1 style="
-            color:#d4af37;
-            font-size:2.5rem;
-            margin-bottom:25px;">
-            How to Choose the Right Event Planner
-        </h1>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-        <p style="
-            font-size:1.1rem;
-            line-height:1.9;
-            color:rgba(126, 111, 111, 0.85);">
-            Choosing the right event planner is one of the most important decisions when 
-            organizing a successful event. A professional planner should have experience, 
-            creativity, and strong organizational skills to bring your vision to life. 
-            Before hiring, review their portfolio, previous projects, and client testimonials 
-            to understand their expertise and style. It is also important to discuss your budget,
-             expectations, and event requirements to ensure they can meet your needs effectively. 
-             A reliable event planner should have strong vendor connections, excellent communication
-              skills, and the ability to handle unexpected challenges with confidence. Whether you are 
-              planning a wedding, corporate event, birthday celebration, or social gathering, selecting 
-              the right planner ensures a smooth and stress-free experience. At SAZ Event Planner, we are 
-              committed to delivering personalized, memorable, and professionally managed events that 
-              exceed expectations.
-        </p>
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-        <a href="index.html#blog"
-           style="
-                display:inline-block;
-                margin-top:25px;
-                padding:12px 25px;
-                background:#d4af37;
-                color:#000;
-                text-decoration:none;
-                border-radius:6px;
-                font-weight:bold;">
-            ← Back to Blogs
-        </a>
-    </div>
-</div>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .blog-detail-section {
+            min-height: 100vh;
+            padding: 150px 0 80px;
+            background: #000;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blog-detail-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .blog-detail-card {
+            background: rgba(10, 10, 10, 0.9);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 20px;
+            padding: 60px;
+            backdrop-filter: blur(10px);
+        }
+
+        .blog-detail-image {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            border: 2px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .blog-detail-title {
+            color: #d4af37;
+            font-size: 3rem;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 30px;
+            line-height: 1.3;
+        }
+
+        .blog-detail-meta {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .blog-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+        }
+
+        .blog-meta-item i {
+            color: #d4af37;
+        }
+
+        .blog-detail-content {
+            font-size: 1.15rem;
+            line-height: 2;
+            color: rgba(255, 255, 255, 0.85);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .blog-detail-content p {
+            margin-bottom: 25px;
+        }
+
+        .back-to-blogs {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 40px;
+            padding: 15px 35px;
+            background: linear-gradient(135deg, #d4af37, #f4d03f);
+            color: #000;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-to-blogs:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .blog-detail-card {
+                padding: 30px 20px;
+            }
+
+            .blog-detail-title {
+                font-size: 2rem;
+            }
+
+            .blog-detail-image {
+                height: 300px;
+            }
+
+            .blog-detail-content {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Header -->
+    <header class="navbar" id="navbar">
+        <div class="header-container">
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <a href="index.html#booking" class="nav-cta">Book Event</a>
+        </div>
+    </header>
+
+    <!-- Dashboard Navigation -->
+    <div class="dashboard-overlay" id="dashboardOverlay"></div>
+    <nav class="dashboard" id="dashboard">
+        <div class="dashboard-header">
+            <h2 class="dashboard-title">Menu</h2>
+            <button class="close-btn" id="closeBtn" aria-label="Close Menu">&times;</button>
+        </div>
+        <div class="dashboard-content">
+            <div class="dashboard-logo">
+                <img src="assets/logo1.jpeg" style="width: 50px; height: auto;" alt="SAZ Event Planning">
+            </div>
+            <ul class="dashboard-menu" id="navMenu">
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li><a href="index.html#services" class="nav-link">Services</a></li>
+                <li><a href="index.html#categories" class="nav-link">Categories</a></li>
+                <li><a href="index.html#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#google-reviews" class="nav-link">Google Reviews</a></li>
+                <li><a href="index.html#booking" class="nav-link">Book Event</a></li>
+                <li><a href="index.html#vendor-register" class="nav-link">Vendors Reg</a></li>
+                <li><a href="index.html#Blog" class="nav-link active">Blog</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                <li><a href="index.html#faq" class="nav-link">FAQ</a></li>
+            </ul>
+            <div class="dashboard-footer">
+                <a href="index.html#booking" class="nav-cta mobile-cta">Book Event</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Detail Section -->
+    <section class="blog-detail-section">
+        <div class="particles" id="particles"></div>
+
+        <div class="blog-detail-container">
+            <div class="blog-detail-card" data-aos="fade-up">
+                <img src="assets/blog/blog3.jpeg" alt="How to Choose the Right Event Planner" class="blog-detail-image">
+
+                <div class="blog-detail-meta">
+                    <div class="blog-meta-item">
+                        <i class="fas fa-calendar"></i>
+                        <span>August 27, 2024</span>
+                    </div>
+                    <div class="blog-meta-item">
+                        <i class="fas fa-user"></i>
+                        <span>SAZ Events Team</span>
+                    </div>
+                    <div class="blog-meta-item">
+                        <i class="fas fa-clock"></i>
+                        <span>5 min read</span>
+                    </div>
+                </div>
+
+                <h1 class="blog-detail-title">How to Choose the Right Event Planner</h1>
+
+                <div class="blog-detail-content">
+                    <p>
+                        Choosing the right event planner is one of the most important decisions when organizing a successful event. A professional planner should have experience, creativity, and strong organizational skills to bring your vision to life.
+                    </p>
+
+                    <p>
+                        Before hiring, review their portfolio, previous projects, and client testimonials to understand their expertise and style. It is also important to discuss your budget, expectations, and event requirements to ensure they can meet your needs effectively.
+                    </p>
+
+                    <p>
+                        A reliable event planner should have strong vendor connections, excellent communication skills, and the ability to handle unexpected challenges with confidence. Whether you are planning a wedding, corporate event, birthday celebration, or social gathering, selecting the right planner ensures a smooth and stress-free experience.
+                    </p>
+
+                    <p>
+                        At SAZ Event Planner, we are committed to delivering personalized, memorable, and professionally managed events that exceed expectations. Our team works closely with clients to understand their unique vision and brings it to life with precision and creativity.
+                    </p>
+                </div>
+
+                <a href="index.html#Blog" class="back-to-blogs">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>Back to All Blogs</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <a href="index.html#home" class="footer-logo"></a>
+                        <p class="footer-description">
+                            Creating unforgettable luxury events with passion, creativity, and meticulous attention to detail.
+                        </p>
+                    </div>
+
+                    <div class="footer-links">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html#home">Home</a></li>
+                            <li><a href="index.html#services">Services</a></li>
+                            <li><a href="index.html#gallery">Gallery</a></li>
+                            <li><a href="index.html#about">About Us</a></li>
+                            <li><a href="index.html#contact">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-newsletter">
+                        <h4>Newsletter</h4>
+                        <p>Subscribe for event tips and exclusive offers</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Enter your email" required>
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p>© 2024 SAZ Events. All Rights Reserved. | Designed with <i class="fas fa-heart"></i> for unforgettable moments</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/918591271894" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <span>Chat with us</span>
+    </a>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
+</body>
+</html>
