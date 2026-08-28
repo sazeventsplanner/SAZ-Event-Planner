@@ -1247,7 +1247,186 @@
         </div>
     </section>
 
-<!-- Booking Section -->
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text aos-init aos-animate" data-aos="fade-right">
+                    <span class="section-subtitle">About SAZ Events</span>
+                    <h2 class="section-title">Crafting <span class="text-gradient">Extraordinary</span> Experiences Since 2020</h2>
+                    <p class="about-description">
+                        SAZ Events is a premier event planning company dedicated to creating 
+                        unforgettable moments. With over 6 years of experience in the industry, 
+                        we have perfected the art of transforming visions into reality.
+                    </p>
+                    <p class="about-description">
+                        Our team of experienced professionals works tirelessly to ensure every 
+                        detail is executed flawlessly. From intimate gatherings to grand 
+                        celebrations, we bring passion, creativity, and expertise to every event.
+                    </p>
+                    
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Personalized Service</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Attention to Detail</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Vendor Network</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Budget Management</span>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="btn btn-primary">
+                        <span>Get in Touch</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="about-stats aos-init aos-animate" data-aos="fade-left">
+                    <div class="about-stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number" data-target="100">100</span>
+                            <span class="stat-plus">+</span>
+                            <span class="stat-label">Events Executed</span>
+                        </div>
+                    </div>
+                    
+                    <div class="about-stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number" data-target="90">90</span>
+                            <span class="stat-plus">+</span>
+                            <span class="stat-label">Satisfied Clients</span>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <div class="about-stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number" data-target="5">5</span>
+                            <span class="stat-plus">+</span>
+                            <span class="stat-label">Cities Covered</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Timeline -->
+            <div class="timeline aos-init aos-animate" data-aos="fade-up">
+                <div class="timeline-item">
+                    <div class="timeline-marker">2020</div>
+                    <div class="timeline-content">
+                        <h4>Company Founded</h4>
+                        <p>SAZ Events was established with a vision to revolutionize event planning in India.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker">2021</div>
+                    <div class="timeline-content">
+                        <h4>Expanded Services</h4>
+                        <p>Added corporate events and destination weddings to our portfolio.</p>
+                    </div>
+                </div>
+                
+                
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker">2025</div>
+                    <div class="timeline-content">
+                        <h4>Continued Excellence</h4>
+                        <p>Celebrating 5 years of creating unforgettable experiences.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Banner Section -->
+    <section class="video-banner">
+        <div class="video-banner-overlay"></div>
+        
+        <div class="container">
+            <div class="video-banner-content aos-init aos-animate" data-aos="fade-up">
+                <h2>Every Event Tells a Story</h2>
+                <p>Let us help you create a narrative worth remembering</p>
+                <a href="#booking" class="btn btn-primary">
+                    <span>Start Your Story</span>
+                    <i class="fas fa-play"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Countdown Timer Section -->
+    <section class="countdown-section">
+        <div class="container">
+            <div class="countdown-content aos-init aos-animate" data-aos="fade-up">
+                <span class="section-subtitle">Limited Time Offer</span>
+                <h2>Book Your 2026 Event Today</h2>
+                <p>Special discounts available for early bookings</p>
+                
+                <div class="countdown-timer">
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="days">29</span>
+                        <span class="countdown-label">Days</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="hours">21</span>
+                        <span class="countdown-label">Hours</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="minutes">58</span>
+                        <span class="countdown-label">Minutes</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="seconds">26</span>
+                        <span class="countdown-label">Seconds</span>
+                    </div>
+                </div>
+                
+                <a href="#booking" class="btn btn-primary">
+                    <span>Book Now</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Reviews Section -->
+     <section class="Google Reviews" id="google-reviews">
+                <div class="container">
+                    <div class="section-header aos-init aos-animate" data-aos="fade-up">
+                        <span class="section-subtitle">Google Reviews</span>
+                        <h2 class="section-title">What Our Clients Say</h2>
+                    </div>
+
+                    <!-- Elfsight Google Reviews -->
+                    <!-- Elfsight Google Reviews | Untitled Google Reviews -->
+                    <script src="https://elfsightcdn.com/platform.js" async></script>
+                    <div class="elfsight-app-347e7920-7c1d-42e5-987b-5e69a87c3efa"
+                        data-elfsight-app-lazy></div>
+                </div>
+     </section>
+
+    <!-- Booking Section -->
 <section class="booking" id="booking">
     <div class="container">
          <div class="section-header aos-init aos-animate" data-aos="fade-up">
@@ -1324,7 +1503,7 @@
         </div>
     </div>
 </section>
-<!-- Vendor Registration Section -->
+    <!-- Vendor Registration Section -->
     <section class="vendor-register" id="vendor-register">
         <div class="container">
             <div class="section-header aos-init aos-animate" data-aos="fade-up">
@@ -1384,22 +1563,107 @@
             </div>
         </div>
     </section>
-    <!-- Google Reviews Section -->
-     <section class="Google Reviews" id="google-reviews">
-                <div class="container">
-                    <div class="section-header aos-init aos-animate" data-aos="fade-up">
-                        <span class="section-subtitle">Google Reviews</span>
-                        <h2 class="section-title">What Our Clients Say</h2>
-                    </div>
+        <!-- Blog Section -->
+         <section class="blog" id="blog">
+        <div class="container">
+            <div class="section-header aos-init aos-animate" data-aos="fade-up">
+                <span class="section-subtitle">Blogs</span>
+                <h2 class="section-title">Insight & <span class="text-gradient">Update</span></h2>
+                <p class="section-description">
+                    Stay ahead of the curve with our latest insights on branding, marketing trends,
+                     and creative strategies
+                </p>
+            </div>
+        <div class="blog-card" style="display:flex; align-items:center; gap:40px; margin-bottom:60px;">
 
-                    <!-- Elfsight Google Reviews -->
-                    <!-- Elfsight Google Reviews | Untitled Google Reviews -->
-                    <script src="https://elfsightcdn.com/platform.js" async></script>
-                    <div class="elfsight-app-347e7920-7c1d-42e5-987b-5e69a87c3efa"
-                        data-elfsight-app-lazy></div>
-                </div>
-     </section>
-<!-- Contact Section -->
+        <div class="blog-image" style="flex:0 0 40%;">
+            <img src="assets/blog/blog1.jpeg"
+                 alt="Event Planning"
+                style="width:100%; height:350px; object-fit:cover; border-radius:15px;">
+        </div>
+
+        <div class="blog-content" style="flex:0 0 60%;">
+            <h3>Why Professional Event Planning Matters</h3>
+
+            <p>
+               Planning a successful event requires attention to detail,
+                coordination, and creativity. Discover how professional
+              event planning can transform your vision into a memorable
+                experience while reducing stress and saving time.
+            </p>
+
+            <a href="blog1.html" style="
+               display:inline-block;
+                padding:12px 25px;
+               background:#d4af37;
+                color:#000;
+               text-decoration:none;
+               border-radius:5px;
+              font-weight:bold;">
+               Read More
+            </a>
+        </div>
+    </div>
+
+        <!-- Blog 2 -->
+    <div class="blog-card" style="display:flex; align-items:center; gap:40px; margin-bottom:60px;">
+        <div class="blog-image" style="flex:0 0 40%;">
+            <img src="assets/blog/blog2.jpeg"
+                 alt="Event Planning"
+                style="width:100%; height:350px; object-fit:cover; border-radius:15px;">
+        </div>
+
+        <div class="blog-content" style="flex:0 0 60%;">
+                <h3>Top Event Trends for Modern Celebrations</h3>
+            <p>
+               Explore the latest trends in weddings, corporate events,
+               birthdays, and social gatherings. Learn how modern décor,
+               entertainment, and personalized experiences create
+               unforgettable celebrations.
+            </p>
+                <a href="blog2.html" style="
+                    display:inline-block;
+                  padding:12px 25px;
+                   background:#d4af37;
+                    color:#000;
+                   text-decoration:none;
+                  border-radius:5px;
+                   font-weight:bold;">
+                   Read More
+                </a>
+        </div>
+    </div>
+        <!-- Blog 3 -->
+             <div class="blog-card" style="display:flex; align-items:center; gap:40px; margin-bottom:60px;">
+        <div class="blog-image" style="flex:0 0 40%;">
+            <img src="assets/blog/blog3.jpeg"
+                 alt="Event Planning"
+                style="width:100%; height:350px; object-fit:cover; border-radius:15px;">
+        </div>
+
+        <div class="blog-content" style="flex:0 0 60%;">
+                <h3>How to Choose the Right Event Planner</h3>
+            <p>
+               Choosing the right event planner is one of the most
+                    important decisions for a successful event. Learn what
+                    factors to consider, from experience and reviews to
+                    creativity and budget management.
+            </p>
+                <a href="blog3.html" style="
+                    display:inline-block;
+                  padding:12px 25px;
+                   background:#d4af37;
+                    color:#000;
+                   text-decoration:none;
+                  border-radius:5px;
+                   font-weight:bold;">
+                   Read More
+                </a>
+        </div>
+    </div>
+
+
+    <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
             <div class="section-header aos-init aos-animate" data-aos="fade-up">
@@ -1591,266 +1855,8 @@
 </script>
         </div>
     </section>
-<!-- Blog Section -->
-         <section class="blog" id="blog">
-        <div class="container">
-            <div class="section-header aos-init aos-animate" data-aos="fade-up">
-                <span class="section-subtitle">Blogs</span>
-                <h2 class="section-title">Insight & <span class="text-gradient">Update</span></h2>
-                <p class="section-description">
-                    Stay ahead of the curve with our latest insights on branding, marketing trends,
-                     and creative strategies
-                </p>
-            </div>
-        <div class="blog-card" style="display:flex; align-items:center; gap:40px; margin-bottom:60px;">
 
-        <div class="blog-image" style="flex:0 0 40%;">
-            <img src="assets/blog/blog1.jpeg"
-                 alt="Event Planning"
-                style="width:100%; height:350px; object-fit:cover; border-radius:15px;">
-        </div>
-
-        <div class="blog-content" style="flex:0 0 60%;">
-            <h3>Why Professional Event Planning Matters</h3>
-
-            <p>
-               Planning a successful event requires attention to detail,
-                coordination, and creativity. Discover how professional
-              event planning can transform your vision into a memorable
-                experience while reducing stress and saving time.
-            </p>
-
-            <a href="blog1.html" style="
-               display:inline-block;
-                padding:12px 25px;
-               background:#d4af37;
-                color:#000;
-               text-decoration:none;
-               border-radius:5px;
-              font-weight:bold;">
-               Read More
-            </a>
-        </div>
-    </div>
-
-        <!-- Blog 2 -->
-    <div class="blog-card" style="display:flex; align-items:center; gap:40px; margin-bottom:60px;">
-        <div class="blog-image" style="flex:0 0 40%;">
-            <img src="assets/blog/blog2.jpeg"
-                 alt="Event Planning"
-                style="width:100%; height:350px; object-fit:cover; border-radius:15px;">
-        </div>
-
-        <div class="blog-content" style="flex:0 0 60%;">
-                <h3>Top Event Trends for Modern Celebrations</h3>
-            <p>
-               Explore the latest trends in weddings, corporate events,
-               birthdays, and social gatherings. Learn how modern décor,
-               entertainment, and personalized experiences create
-               unforgettable celebrations.
-            </p>
-                <a href="blog2.html" style="
-                    display:inline-block;
-                  padding:12px 25px;
-                   background:#d4af37;
-                    color:#000;
-                   text-decoration:none;
-                  border-radius:5px;
-                   font-weight:bold;">
-                   Read More
-                </a>
-        </div>
-    </div>
-        <!-- Blog 3 -->
-             <div class="blog-card" style="display:flex; align-items:center; gap:40px; margin-bottom:60px;">
-        <div class="blog-image" style="flex:0 0 40%;">
-            <img src="assets/blog/blog3.jpeg"
-                 alt="Event Planning"
-                style="width:100%; height:350px; object-fit:cover; border-radius:15px;">
-        </div>
-
-        <div class="blog-content" style="flex:0 0 60%;">
-                <h3>How to Choose the Right Event Planner</h3>
-            <p>
-               Choosing the right event planner is one of the most
-                    important decisions for a successful event. Learn what
-                    factors to consider, from experience and reviews to
-                    creativity and budget management.
-            </p>
-                <a href="blog3.html" style="
-                    display:inline-block;
-                  padding:12px 25px;
-                   background:#d4af37;
-                    color:#000;
-                   text-decoration:none;
-                  border-radius:5px;
-                   font-weight:bold;">
-                   Read More
-                </a>
-        </div>
-    </div>
-
-<!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text aos-init aos-animate" data-aos="fade-right">
-                    <span class="section-subtitle">About SAZ Events</span>
-                    <h2 class="section-title">Crafting <span class="text-gradient">Extraordinary</span> Experiences Since 2020</h2>
-                    <p class="about-description">
-                        SAZ Events is a premier event planning company dedicated to creating 
-                        unforgettable moments. With over 6 years of experience in the industry, 
-                        we have perfected the art of transforming visions into reality.
-                    </p>
-                    <p class="about-description">
-                        Our team of experienced professionals works tirelessly to ensure every 
-                        detail is executed flawlessly. From intimate gatherings to grand 
-                        celebrations, we bring passion, creativity, and expertise to every event.
-                    </p>
-                    
-                    <div class="about-features">
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Personalized Service</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Attention to Detail</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Vendor Network</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Budget Management</span>
-                        </div>
-                    </div>
-                    
-                    <a href="#contact" class="btn btn-primary">
-                        <span>Get in Touch</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-                
-                <div class="about-stats aos-init aos-animate" data-aos="fade-left">
-                    <div class="about-stat-card">
-                        <div class="stat-icon">
-                            <i class="fas fa-calendar-check"></i>
-                        </div>
-                        <div class="stat-info">
-                            <span class="stat-number" data-target="100">100</span>
-                            <span class="stat-plus">+</span>
-                            <span class="stat-label">Events Executed</span>
-                        </div>
-                    </div>
-                    
-                    <div class="about-stat-card">
-                        <div class="stat-icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <div class="stat-info">
-                            <span class="stat-number" data-target="90">90</span>
-                            <span class="stat-plus">+</span>
-                            <span class="stat-label">Satisfied Clients</span>
-                        </div>
-                    </div>
-                    
-                    
-                    
-                    <div class="about-stat-card">
-                        <div class="stat-icon">
-                            <i class="fas fa-globe"></i>
-                        </div>
-                        <div class="stat-info">
-                            <span class="stat-number" data-target="5">5</span>
-                            <span class="stat-plus">+</span>
-                            <span class="stat-label">Cities Covered</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Timeline -->
-            <div class="timeline aos-init aos-animate" data-aos="fade-up">
-                <div class="timeline-item">
-                    <div class="timeline-marker">2020</div>
-                    <div class="timeline-content">
-                        <h4>Company Founded</h4>
-                        <p>SAZ Events was established with a vision to revolutionize event planning in India.</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-marker">2021</div>
-                    <div class="timeline-content">
-                        <h4>Expanded Services</h4>
-                        <p>Added corporate events and destination weddings to our portfolio.</p>
-                    </div>
-                </div>
-                
-                
-                
-                <div class="timeline-item">
-                    <div class="timeline-marker">2025</div>
-                    <div class="timeline-content">
-                        <h4>Continued Excellence</h4>
-                        <p>Celebrating 5 years of creating unforgettable experiences.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-<!-- Video Banner Section -->
-    <section class="video-banner">
-        <div class="video-banner-overlay"></div>
-        
-        <div class="container">
-            <div class="video-banner-content aos-init aos-animate" data-aos="fade-up">
-                <h2>Every Event Tells a Story</h2>
-                <p>Let us help you create a narrative worth remembering</p>
-                <a href="#booking" class="btn btn-primary">
-                    <span>Start Your Story</span>
-                    <i class="fas fa-play"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-<!-- Countdown Timer Section -->
-    <section class="countdown-section">
-        <div class="container">
-            <div class="countdown-content aos-init aos-animate" data-aos="fade-up">
-                <span class="section-subtitle">Limited Time Offer</span>
-                <h2>Book Your 2026 Event Today</h2>
-                <p>Special discounts available for early bookings</p>
-                
-                <div class="countdown-timer">
-                    <div class="countdown-item">
-                        <span class="countdown-number" id="days">29</span>
-                        <span class="countdown-label">Days</span>
-                    </div>
-                    <div class="countdown-item">
-                        <span class="countdown-number" id="hours">21</span>
-                        <span class="countdown-label">Hours</span>
-                    </div>
-                    <div class="countdown-item">
-                        <span class="countdown-number" id="minutes">58</span>
-                        <span class="countdown-label">Minutes</span>
-                    </div>
-                    <div class="countdown-item">
-                        <span class="countdown-number" id="seconds">26</span>
-                        <span class="countdown-label">Seconds</span>
-                    </div>
-                </div>
-                
-                <a href="#booking" class="btn btn-primary">
-                    <span>Book Now</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-<!-- FAQ Section -->
+    <!-- FAQ Section -->
     <section class="faq" id="faq">
         <div class="container">
             <div class="section-header aos-init aos-animate" data-aos="fade-up">
@@ -1925,8 +1931,6 @@
             </div>
         </div>
     </section>
-
-
 
     <!-- Footer -->
     <footer class="footer">
