@@ -402,9 +402,9 @@ document.addEventListener('keydown', (e) => {
 });
 
 // ============================================
-// Booking Form Submission
+// Booking Form Submission -> WhatsApp
 // ============================================
-bookingForm.addEventListener('submit', async (e) => {
+bookingForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
     if (!bookingForm.checkValidity()) {
@@ -412,44 +412,30 @@ bookingForm.addEventListener('submit', async (e) => {
         return;
     }
 
+    // Collect form data
     const formData = new FormData(bookingForm);
-    const emailInput = bookingForm.querySelector('input[type="email"]');
-    const replytoInput = document.getElementById('replytoInput');
+    const name = formData.get('name') || '';
+    const email = formData.get('email') || '';
+    const phone = formData.get('phone') || '';
+    const eventType = formData.get('event-type') || '';
+    const guests = formData.get('guests') || '';
+    const date = formData.get('date') || '';
+    const message = formData.get('message') || '';
 
-    if (emailInput && replytoInput) {
-        replytoInput.value = emailInput.value.trim();
-    }
+    // Build WhatsApp message
+    let whatsappMessage = `New Booking Request\n\n`;
+    whatsappMessage += `Name: ${name}\n`;
+    if (email) whatsappMessage += `Email: ${email}\n`;
+    if (phone) whatsappMessage += `Phone: ${phone}\n`;
+    if (eventType) whatsappMessage += `Event Type: ${eventType}\n`;
+    if (guests) whatsappMessage += `Number of Guests: ${guests}\n`;
+    if (date) whatsappMessage += `Event Date: ${date}\n`;
+    if (message) whatsappMessage += `Message: ${message}\n`;
 
-    const actionUrl = bookingForm.getAttribute('action') || '';
-    let successMessage = 'Thank you for choosing SAZ Events. Our team will contact you within 24 hours to discuss your event details.';
+    const whatsappNumber = '918591271894';
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
-    if (actionUrl.includes('formspree.io') && !actionUrl.includes('yourFormId')) {
-        try {
-            const response = await fetch(actionUrl, {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    Accept: 'application/json',
-                },
-            });
-
-            if (!response.ok) {
-                throw new Error('Form submission failed');
-            }
-        } catch (error) {
-            console.error('Booking form submission error:', error);
-            successMessage = 'Your booking request was recorded locally, but your Formspree endpoint needs to be configured for live submissions.';
-        }
-    } else {
-        successMessage = 'Your booking request has been registered. Replace the form action value with your Formspree endpoint to enable full email delivery.';
-        console.warn('Formspree endpoint is not configured. Update the booking form action attribute.');
-    }
-
-    const modalText = successModal.querySelector('p');
-    if (modalText) {
-        modalText.textContent = successMessage;
-    }
-    successModal.classList.add('active');
+    window.open(whatsappUrl, '_blank');
     bookingForm.reset();
 });
 
