@@ -2141,6 +2141,11 @@ section {
     }
 }
 
+/* Mobile "Show More" buttons - hidden on desktop by default */
+.show-more-btn {
+    display: none;
+}
+
 @media (max-width: 768px) {
     :root {
         --section-padding: 50px;
@@ -2275,8 +2280,8 @@ section {
         gap: 20px;
     }
 
-    /* Hide services beyond the 4th item on mobile */
-    .services-grid .service-card:nth-child(n+5) {
+    /* Hide services beyond the 3rd item on mobile */
+    .services-grid .service-card:nth-child(n+4) {
         display: none;
     }
 
@@ -2399,14 +2404,9 @@ section {
         gap: 15px;
     }
 
-    /* Hide gallery items beyond the 6th item on mobile */
-    .gallery-grid .gallery-item:nth-child(n+7) {
-        display: none;
-    }
-
-    .gallery-grid.show-all .gallery-item {
-        display: block;
-    }
+    /* Gallery items beyond the 6th visible one are hidden by script.js
+       (JS is required here because filter/randomize logic already sets
+       inline display styles on each .gallery-item) */
 
     .gallery-item {
         aspect-ratio: 3/4;
@@ -2663,6 +2663,15 @@ section {
     }
 
     /* Blog Section Mobile */
+    /* Hide blog posts beyond the 1st one on mobile */
+    .blog-grid .blog-card:nth-child(n+2) {
+        display: none !important;
+    }
+
+    .blog-grid.show-all .blog-card:nth-child(n+2) {
+        display: flex !important;
+    }
+
     .blog-card {
         flex-direction: column !important;
         gap: 20px !important;

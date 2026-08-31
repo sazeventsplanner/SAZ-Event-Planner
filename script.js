@@ -835,6 +835,10 @@ faqItems.forEach(item => {
     }
 
     setupToggleShowMore(
+        document.querySelector('.services-grid'),
+        document.getElementById('servicesShowMoreBtn')
+    );
+    setupToggleShowMore(
         document.querySelector('.categories-grid'),
         document.getElementById('categoriesShowMoreBtn')
     );
