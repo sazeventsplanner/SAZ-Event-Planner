@@ -133,6 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const openMenu = () => {
         dashboard.classList.add('active');
         if (overlay) overlay.classList.add('active');
+        document.body.classList.add('sidebar-open'); // Add class to body
         document.body.style.overflow = 'hidden'; // Stop background scrolling
     };
 
@@ -140,6 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeMenu = () => {
         dashboard.classList.remove('active');
         if (overlay) overlay.classList.remove('active');
+        document.body.classList.remove('sidebar-open'); // Remove class from body
         document.body.style.overflow = ''; // Restore background scrolling
     };
 
@@ -809,6 +811,110 @@ faqItems.forEach(item => {
         }
     });
 });
+
+// ============================================
+// Mobile "Show More" — Categories, Gallery, Blog
+// (keeps mobile view short without touching desktop
+//  or removing any data; only limits what's visible)
+// ============================================
+(function () {
+    const MOBILE_BREAKPOINT = 768;
+    const isMobile = () => window.innerWidth <= MOBILE_BREAKPOINT;
+
+    // ---- Categories & Blog: simple CSS class toggle ----
+    // (their CSS already hides extra items via nth-child,
+    //  we just need to flip the "show-all" class)
+    function setupToggleShowMore(gridEl, btnEl) {
+        if (!gridEl || !btnEl) return;
+        btnEl.addEventListener('click', () => {
+            const expanded = gridEl.classList.toggle('show-all');
+            btnEl.classList.toggle('active', expanded);
+            const label = btnEl.querySelector('span');
+            if (label) label.textContent = expanded ? 'Show Less' : 'Show More';
+        });
+    }
+
+    setupToggleShowMore(
+        document.querySelector('.categories-grid'),
+        document.getElementById('categoriesShowMoreBtn')
+    );
+    setupToggleShowMore(
+        document.getElementById('blogGrid'),
+        document.getElementById('blogShowMoreBtn')
+    );
+
+    // ---- Gallery: items are shown/hidden dynamically by the
+    // filter buttons and the random-gallery script (both set
+    // inline styles), so we re-apply the mobile limit every
+    // time the visible set changes, instead of relying on CSS. ----
+    const GALLERY_MOBILE_LIMIT = 6;
+    const galleryBtn = document.getElementById('galleryShowMoreBtn');
+    let galleryExpanded = false;
+
+    function applyMobileGalleryLimit() {
+        if (!galleryBtn) return;
+
+        const allItems = Array.from(document.querySelectorAll('.gallery-item'));
+        const visibleItems = allItems.filter(item => item.style.display !== 'none');
+
+        if (!isMobile()) {
+            galleryBtn.style.display = 'none';
+            return;
+        }
+
+        if (!galleryExpanded) {
+            visibleItems.forEach((item, index) => {
+                if (index >= GALLERY_MOBILE_LIMIT) {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        galleryBtn.style.display = visibleItems.length > GALLERY_MOBILE_LIMIT ? 'inline-flex' : 'none';
+    }
+
+    if (galleryBtn) {
+        galleryBtn.addEventListener('click', () => {
+            galleryExpanded = !galleryExpanded;
+            galleryBtn.classList.toggle('active', galleryExpanded);
+            const label = galleryBtn.querySelector('span');
+            if (label) label.textContent = galleryExpanded ? 'Show Less' : 'Show More';
+
+            if (galleryExpanded) {
+                // Reveal every item that currently matches the active filter/random set.
+                // We simply re-show everything that isn't explicitly filtered out.
+                const activeFilterBtn = document.querySelector('.filter-btn.active');
+                const activeFilter = activeFilterBtn ? activeFilterBtn.getAttribute('data-filter') : null;
+
+                document.querySelectorAll('.gallery-item').forEach(item => {
+                    const category = item.getAttribute('data-category');
+                    if (!activeFilter || activeFilter === 'all' || category === activeFilter) {
+                        item.style.display = 'block';
+                    }
+                });
+            }
+
+            applyMobileGalleryLimit();
+        });
+
+        // Re-apply the limit whenever a filter button is clicked
+        // (runs after the existing filter click handlers, via setTimeout).
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                galleryExpanded = false;
+                galleryBtn.classList.remove('active');
+                const label = galleryBtn.querySelector('span');
+                if (label) label.textContent = 'Show More';
+                setTimeout(applyMobileGalleryLimit, 0);
+            });
+        });
+
+        // Re-apply on load (after the random-gallery script has run)
+        // and whenever the viewport crosses the mobile breakpoint.
+        setTimeout(applyMobileGalleryLimit, 0);
+        window.addEventListener('resize', () => setTimeout(applyMobileGalleryLimit, 150));
+    }
+})();
 
 // ============================================
 // End of JavaScript
